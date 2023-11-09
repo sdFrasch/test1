@@ -1,20 +1,24 @@
 import react from 'react';
 import "bootstrap/dist/css/bootstrap.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import './App.css';
-import ColorSchemesExample from './Card';
 import Navbar from './Navbar1';
 import Card from './Card';
+import Home from './Home';
+import Contact from './Contact';
 
 function App() {
   return (
     <div className="App">
+      <BrowserRouter>
       <Navbar />
-      <h1>CS 230L</h1>
-      <h2>Section 03</h2>
-      <p>WVU ID 800351421</p>
-      <p>Hi! I am Sam</p>
-      <Card />
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Card" element={<Card />} />
+        <Route path="/Contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
+  </div>
   );
 }
 
