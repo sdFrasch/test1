@@ -1,15 +1,5 @@
 import React from 'react';
 
-const inputContainerStyle = {
-    display: 'flex',
-    flexDirection: 'column', 
-    margin: '0 auto', 
-  };
-const inputStyle = {
-    width: '60%',
-    padding: '10px',
-    margin: '0 auto',
-};
 function Contact() {
   return (
     <div>
